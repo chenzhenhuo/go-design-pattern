@@ -20,7 +20,9 @@ type UserV2Proxy struct {
 
 func (receiver *UserV2Proxy) Hello() {
 	fmt.Println("牛逼")
+	//前置操作。。。。
 	receiver.userV2.Hello()
+	//后置操作。。。。
 	return
 }
 
