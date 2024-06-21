@@ -21,3 +21,11 @@ func TestAwsClientAdapter_CreateServer(t *testing.T) {
 
 	a.CreateServer(1.0, 2.0)
 }
+
+func TestSwimming(t *testing.T) {
+	var a IPlay = &SwimmingAdapter{Target: Swimming{}}
+	a.Play(1)
+
+	var b IPlay = &RunAdapter{Target: Run{}}
+	b.Play(1)
+}
