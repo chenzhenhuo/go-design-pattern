@@ -1,6 +1,7 @@
 package facade
 
 import (
+	"fmt"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
@@ -24,4 +25,9 @@ func TestUserService_Register(t *testing.T) {
 	user, err := service.User.Register(13001010101, 1234)
 	assert.NoError(t, err)
 	assert.Equal(t, &User{Name: "test register"}, user)
+}
+
+func TestOneKey(t *testing.T) {
+	aa := NewOneKey().ActivateAndAccelerator()
+	fmt.Println(aa)
 }

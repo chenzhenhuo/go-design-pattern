@@ -29,3 +29,11 @@ func Test_demo(t *testing.T) {
 func getData() ([]byte, bool) {
 	return []byte("test data"), false
 }
+
+func TestPay(t *testing.T) {
+	payObj := NewPayCommon("wx")
+	if payObj == nil {
+		return
+	}
+	payObj.Pay()
+}

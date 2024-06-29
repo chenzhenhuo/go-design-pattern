@@ -11,6 +11,7 @@ type ISubject interface {
 
 // IObserver 观察者
 type IObserver interface {
+	// Update 获取消息内容处理自己的业务
 	Update(msg string)
 }
 

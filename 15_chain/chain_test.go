@@ -14,3 +14,10 @@ func TestSensitiveWordFilterChain_Filter(t *testing.T) {
 	chain.AddFilter(&PoliticalWordFilter{})
 	assert.Equal(t, true, chain.Filter("test"))
 }
+
+func TestCheck(t *testing.T) {
+	chain := &Present{}
+	chain.AddCheck(&UserCheck{})
+	chain.AddCheck(&GroupCheck{})
+	chain.Check()
+}
